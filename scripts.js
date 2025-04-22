@@ -28,3 +28,17 @@ function limparTabela() {
         tabelaBody.innerHTML = "";
     }
 }
+
+//Função calcular valores 
+function calcular() {
+    const tabelaDados = document.getElementById('tabelaDados');
+    const corpoTabela = tabelaDados.getElementsByTagName('tbody')[0];
+
+    const total = Array.from(corpoTabela.rows)
+        .map(row => parseFloat(row.cells[1].textContent) || 0)
+        .reduce((sum, valor) => sum + valor, 0);
+
+    alert(`O total de gastos é: R$ ${total.toFixed(2)}`);
+    console.log(`Total de gastos: R$ ${total.toFixed(2)}`);
+
+}
