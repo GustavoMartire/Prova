@@ -19,3 +19,12 @@ function adicionarItem() {
     celulaValor.innerHTML = valor;
     celulaCategoria.innerHTML = categoria;
 }
+
+
+//Função para limpar os dados da tabela 
+function limparTabela() {
+    const tabelaBody = document.querySelector("#tabelaDados tbody");
+    if (tabelaBody) {
+        tabelaBody.innerHTML = "";
+    }
+}
